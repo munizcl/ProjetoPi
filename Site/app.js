@@ -1,13 +1,7 @@
-const express = require('express');
-const consign = require('consign');
-const bodyParser = require('body-parser');
-
-const app = express();
+const app = require('./config/server');
 
 app.listen(3000, () => {
-    console.log('foi');
+    console.log('Aplicação rodando na porta 3000');
 });
 
-app.get('/', (req, res)=>{
-    res.send('index')
-})
+module.exports = app;
